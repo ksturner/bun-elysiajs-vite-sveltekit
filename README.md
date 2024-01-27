@@ -52,3 +52,12 @@ bun start
 ```
 
 When bundling for production, you'll probably want to use a Bun docker image and copy the build into that before executing start.
+
+## Reference
+
+-   [Bun](https://bun.sh)
+-   [ElysiaJS](https://elysiajs.com)
+-   [Vite](https://vitejs.dev/)
+-   [Svelte](https://svelte.dev/)
+-   [SvelteKit](https://kit.svelte.dev/)
+-   [Typescript](https://www.typescriptlang.org/)

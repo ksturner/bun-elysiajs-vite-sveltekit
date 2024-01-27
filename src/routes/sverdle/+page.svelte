@@ -207,6 +207,7 @@
 		justify-content: center;
 		gap: 1rem;
 		flex: 1;
+		font-family: var(--font-header);
 	}
 
 	.how-to-play {

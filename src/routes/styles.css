@@ -7,6 +7,7 @@
         'Helvetica Neue', sans-serif;
     --font-mono: 'Fira Mono', monospace;
     --font-header: Arial, monospace;
+    --font-arial: Arial, -apple-system, sans-serif;
     --color-bg-0: rgb(187, 223, 255);
     --color-bg-1: hsl(209, 48%, 86%);
     --color-bg-2: hsl(224, 44%, 95%);

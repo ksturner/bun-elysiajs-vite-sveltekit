@@ -1,66 +1,54 @@
-# create-svelte
+# Bun + ElysiaJS + Vite + SvelteKit Template
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+## About
 
-## Creating a project
+### Why Bun?
 
-If you're seeing this, you've probably already done this step. Congrats!
+It's a new, fast javascript runtime that is many orders of magnitude faster than Node. Other than that, is the only (that I know of)
+other node-compatible runtime that offers Typescript with zero configuration. Maybe Deno is another one, but ...
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+### Why ElysiaJS ?
 
-# create a new project in my-app
-npm create svelte@latest my-app
+It's the best bun-oriented web framework for Bun. It's akin to Express.js and is well supported. You'll notice later that we are
+using SvelteKit. SvelteKit doesn't require Bun or ElysiaJS. We use Bun because it's fast. We use ElysiaJS because it offers true
+backend web service functionality. You can write websockets in ElysiaJS backend, but you can not easily, if at all, with SvelteKit.
+
+### Why Vite ?
+
+In short, Vite offers a hot-reload for Svelte, among other nice bundler things. Svelte by itself does some of these things, but it is
+primarily a compiler that produces javascript from svelte files. Vite is a bit more versatile when it comes to bundling and serving.
+
+### Why SvelteKit ?
+
+Svelte is such a clean, fast and reactive way to make web sites. SvelteKit brings routing, SSR, and a framework to Svelte to
+deal with many common web frontend needs.
+
+## System Requirements
+
+### Bun
+
+You'll need to get Bun installed. At this point in time, Bun v1.0.25 is the latest. See: [https://bun.sh](https://bun.sh) to download.
+
+## Getting Started
+
+Install the dependencies:
+
+```shell
+bun install
 ```
 
-## Developing
+Start the development server:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```shell
+bun run dev
 ```
 
-## Building
+Bundle for production deployment:
 
-To create a production version of your app:
-
-```bash
-npm run build
+```shell
+bun run build
+cd build
+bun start
 ```
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-# Output from bun create vite
-
-Bun has a setup script that allows you to use Vite, and then select a number of frameworks. I chose the following:
-
--   Vite
--   Svelte
--   SvelteKit
--   Typescript
-
-## Output Commands
-
-These differ slightly from the generic Svelte commands above, but not too much.
-
-```
-Next steps:
-  1: cd viteapp
-  2: bun install
-  3: git init && git add -A && git commit -m "Initial commit" (optional)
-  4: bun run dev -- --open
-
-To close the dev server, hit Ctrl-C
-
-Stuck? Visit us at https://svelte.dev/chat
-```
-
-We've also followed the excellent [Bun SvelteKit Guide](https://bun.sh/guides/ecosystem/sveltekit)
-and have added `bun add -D svelte-adapter-bun` for enabling production builds.
+When bundling for production, you'll probably want to use a Bun docker image and copy the build into that before executing start.

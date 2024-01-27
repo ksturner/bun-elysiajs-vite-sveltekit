@@ -9,7 +9,7 @@ other node-compatible runtime that offers Typescript with zero configuration. Ma
 
 ### Why ElysiaJS ?
 
-It's the best bun-oriented web framework for Bun. It's akin to Express.js and is well supported. You'll notice later that we are
+It's the best backend web server for Bun. It's akin to Express.js and is well supported. You'll notice later that we are
 using SvelteKit. SvelteKit doesn't require Bun or ElysiaJS. We use Bun because it's fast. We use ElysiaJS because it offers true
 backend web service functionality. You can write websockets in ElysiaJS backend, but you can not easily, if at all, with SvelteKit.
 
@@ -20,8 +20,9 @@ primarily a compiler that produces javascript from svelte files. Vite is a bit m
 
 ### Why SvelteKit ?
 
-Svelte is such a clean, fast and reactive way to make web sites. SvelteKit brings routing, SSR, and a framework to Svelte to
-deal with many common web frontend needs.
+Svelte is such a clean, fast and reactive way to make the frontend for web sites. SvelteKit brings routing, SSR, and a framework to Svelte to
+deal with many common web frontend needs. While SvelteKit doesn't require Bun or ElysiaJS, the addition of those means a faster service with
+more capabilities (websockets, for example) than without.
 
 ## System Requirements
 
